@@ -15,7 +15,7 @@ return (
             </nav>
         </header>
         <main id="main-content" tabIndex={-1}><Outlet /></main>
-        <footer>Alternative portfolio for a class assignment.</footer>
+        <footer>Alternative portfolio for CSCI 4360.</footer>
     </>
     );
 }

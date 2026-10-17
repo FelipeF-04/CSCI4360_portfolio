@@ -27,7 +27,7 @@ export function Experience() {
             
             <h4>CSCI 3100: Algorithms</h4>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
-                <ul style={{ textAlign: 'left', maxWidth: '600px', margin: '0 0 20px 0' }}>
+                <ul style={{ textAlign: 'justify', maxWidth: '600px', margin: '0 0 20px 0' }}>
                     <li>Analyzed algorithms for solving computational problems using techniques such as sorting, searching, recursion, and graph traversal.</li>
                     <li>Applied data structures and algorithmic techniques to develop efficient solutions to programming problems.</li>
                     <li>Analyzed time and space complexity to compare the efficiency of different approaches.</li>
@@ -36,7 +36,7 @@ export function Experience() {
 
             <h4>CSCI 2300: Object-Oriented Software Design</h4>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
-                <ul style={{ textAlign: 'left', maxWidth: '600px', margin: '0 0 20px 0' }}>
+                <ul style={{ textAlign: 'justify', maxWidth: '600px', margin: '0 0 20px 0' }}>
                     <li>Developed programs in C++ using classes, inheritance, polymorphism, and encapsulation.</li>
                     <li>Implemented modular software by separating functionality into reusable classes and components.</li>
                     <li>Applied object-oriented design principles to build and maintain larger C++ programs.</li>
