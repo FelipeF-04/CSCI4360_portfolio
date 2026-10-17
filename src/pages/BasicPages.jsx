@@ -49,7 +49,7 @@ export function Experience() {
 export function Contact() {
     return <section><h1>Contact</h1>
         <p>Email: <a href="mailto:felipe.fungzheng@slu.edu" target="_blank">felipe.fungzheng@slu.edu</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/felipe-fungzheng" target="_blank">felipe.fungzheng</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/felipe-fung-93a647386/" target="_blank">felipe-fung</a></p>
         <p>GitHub: <a href="https://github.com/FelipeF-04" target="_blank">FelipeF-04</a></p>
         </section>;
 }

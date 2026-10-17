@@ -113,3 +113,9 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+.details { 
+  max-width: 450px;
+  margin: 0 auto;
+  text-align: justify; 
+}

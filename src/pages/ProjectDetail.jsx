@@ -10,11 +10,12 @@ export default function ProjectDetail() {
 }
     return <article>
         <h1>{project.title}</h1>
-        <p>{project.technologies.join(", ")}</p>
-        <h2>Problem</h2><p>{project.problem}</p>
-        <h2>My contribution</h2><p>{project.role}</p>
-        <h2>Implementation</h2><p>{project.approach}</p>
-        <h2>Result or lesson</h2><p>{project.outcome}</p>
+        <p>Technologies: {project.technologies.join(", ")}</p>
+        <h2>Problem</h2><p className="details">{project.problem}</p>
+        <h2>My contribution</h2><p className="details">{project.role}</p>
+        <h2>Implementation</h2><p className="details">{project.approach}</p>
+        <h2>Result or lesson</h2><p className="details">{project.outcome}</p>
+        <h2>GitHub Repository</h2><p>Project: <a href={project.github} target="_blank">{project.title}</a></p>
         <Link to="/projects">Back to projects</Link>
     </article>;
 }
