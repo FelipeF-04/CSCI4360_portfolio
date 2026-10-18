@@ -8,10 +8,10 @@ return (
         <header>
             <p className="brand">Felipe Fung | Incoming Software Engineer</p>
             <nav aria-label="Main navigation">
-                <NavLink to="/" end>Home |</NavLink>
-                <NavLink to="/experience"> Experience |</NavLink>
-                <NavLink to="/projects"> Projects |</NavLink>
-                <NavLink to="/contact"> Contact</NavLink>
+                <NavLink to="/" end>Home</NavLink>
+                <NavLink to="/experience">Experience</NavLink>
+                <NavLink to="/projects"> Projects</NavLink>
+                <NavLink to="/contact">Contact</NavLink>
             </nav>
         </header>
         <main id="main-content" tabIndex={-1}><Outlet /></main>
