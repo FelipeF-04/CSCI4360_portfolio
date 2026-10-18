@@ -10,7 +10,7 @@ export default function Projects() {
             .toLowerCase().includes(normalized));
     return <section>
         <h1>Projects</h1>
-        <label htmlFor="project-search">Filter by title, category, or skill</label>
+        <label htmlFor="project-search">Filter by title, category, or skill </label>
         <input id="project-search" value={query}
             onChange={(event) => setQuery(event.target.value)} />
         <p role="status">{visible.length} project(s) found</p>

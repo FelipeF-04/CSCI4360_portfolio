@@ -35,13 +35,15 @@ body {
 }
 
 #root {
-  width: 100%;
-  max-width: 1126px;
+  width: 1126px;
+  max-width: 100%;
   margin: 0 auto;
   text-align: center;
+  border-inline: 1px solid var(--border); /* Restores vertical container lines */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 main {
@@ -50,7 +52,6 @@ main {
   padding: 2rem 1.5rem;
 }
 
-/* Page Titles & Headers (Centered) */
 h1, h2, h3, h4 {
   color: var(--text-h);
   text-align: center;
@@ -68,14 +69,16 @@ h2 {
   margin-bottom: 0.75rem;
 }
 
-/* Paragraphs & Text Content (Justified) */
-p, .details {
+p {
+  text-align: center;
+}
+
+.details {
   text-align: justify;
   margin-top: 0;
   margin-bottom: 1rem;
 }
 
-/* Header & Navigation */
 header {
   border-bottom: 1px solid var(--border);
   padding: 1rem 1.5rem;
@@ -107,7 +110,6 @@ header nav a.active {
   font-weight: 700;
 }
 
-/* Footer */
 footer {
   border-top: 1px solid var(--border);
   padding: 1.25rem;
@@ -116,11 +118,17 @@ footer {
   font-size: 0.875rem;
 }
 
-/* Accessibility & Focus */
 .skip-link {
   position: absolute;
   top: -100px;
   left: 1rem;
+  background: var(--primary);
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  z-index: 100;
 }
 
 .skip-link:focus {
@@ -132,7 +140,6 @@ footer {
   outline-offset: 3px;
 }
 
-/* Links & Interactive Elements */
 a {
   color: var(--primary);
   text-decoration: none;
@@ -153,12 +160,12 @@ input {
   border-radius: 4px;
 }
 
-/* Project Cards & Grid */
 .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 1.25rem;
-  margin-top: 1.5rem;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .card {
@@ -170,7 +177,7 @@ input {
 }
 
 .card h2 {
-  text-align: left;
+  text-align: center;
   margin-top: 0;
 }
 
