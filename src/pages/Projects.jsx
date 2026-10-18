@@ -1,21 +1,68 @@
 import { useState } from "react";
+import { useSearchParams } from "react-router";
 import { projects } from "../data/projects.js";
 import ProjectCard from "../components/ProjectCard.jsx";
 
 export default function Projects() {
-    const [query, setQuery] = useState("");
-    const normalized = query.trim().toLowerCase();
-    const visible = projects.filter((p) =>
-        `${p.title} ${p.category} ${p.technologies.join(" ")}`
-            .toLowerCase().includes(normalized));
-    return <section>
-        <h1>Projects</h1>
-        <label htmlFor="project-search">Filter by title, category, or skill </label>
-        <input id="project-search" value={query}
-            onChange={(event) => setQuery(event.target.value)} />
-        <p role="status">{visible.length} project(s) found</p>
-        {visible.length ? <div className="grid">
-            {visible.map((p) => <ProjectCard key={p.slug} project={p} />)}
-        </div> : <p>No projects match. Try another search.</p>}
-    </section>;
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [query, setQuery] = useState(() => searchParams.get("q") ?? "");
+  const applied = searchParams.get("q") ?? "";
+  const normalized = applied.trim().toLowerCase();
+
+  const visible = projects.filter((p) =>
+    `${p.title} ${p.category} ${p.technologies.join(" ")}`
+      .toLowerCase()
+      .includes(normalized)
+  );
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    const next = new URLSearchParams(searchParams);
+    
+    if (query.trim()) {
+      next.set("q", query.trim());
+    } else {
+      next.delete("q");
+    }
+    
+    setSearchParams(next);
+  }
+
+  return (
+    <section>
+      <h1>Projects</h1>
+      
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="project-search">
+          Filter by title, category, or skill
+        </label>
+        <div className="filter-form">
+          <input
+            id="project-search"
+            value={query}
+            onChange={(event) => setQuery(event.target.value)}
+          />
+          <button type="submit">Apply</button>
+        </div>
+      </form>
+
+      {applied && (
+        <p style={{ fontSize: "0.9rem", opacity: 0.8 }}>
+          Active filter: <strong>"{applied}"</strong>
+        </p>
+      )}
+
+      <p role="status">{visible.length} project(s) found</p>
+
+      {visible.length ? (
+        <div className="grid">
+          {visible.map((p) => (
+            <ProjectCard key={p.slug} project={p} />
+          ))}
+        </div>
+      ) : (
+        <p>No projects match. Try another search.</p>
+      )}
+    </section>
+  );
 }

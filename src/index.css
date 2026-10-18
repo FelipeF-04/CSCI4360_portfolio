@@ -1,4 +1,3 @@
-/* Core Variables & Dark Mode */
 :root {
   --bg: #ffffff;
   --surface: #f8fafc;
@@ -21,7 +20,6 @@
   }
 }
 
-/* Base Reset & Main Layout Centering */
 * {
   box-sizing: border-box;
 }
@@ -131,10 +129,6 @@ footer {
   z-index: 100;
 }
 
-.skip-link:focus {
-  top: 1rem;
-}
-
 :focus-visible {
   outline: 3px solid var(--primary);
   outline-offset: 3px;
@@ -151,7 +145,7 @@ a:hover {
 
 input {
   width: 100%;
-  max-width: 28rem;
+  max-width: 25rem;
   padding: 0.5rem;
   font-size: 1rem;
   background: var(--surface);
@@ -188,4 +182,11 @@ input {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.filter-form {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
 }
