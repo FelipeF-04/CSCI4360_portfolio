@@ -1,16 +1,81 @@
-# React + Vite
+# React + Vite Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is my personal portfolio website created for CSCI 4360/5360: Web Technologies.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**[Live Site](https://felipef-04.github.io/CSCI4360_portfolio/)**
 
-## React Compiler
+## Technologies
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- Vite
+- JavaScript
+- HTML/CSS
 
-## Expanding the ESLint configuration
+## Pages
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Home** — Introduction and interests
+- **Experience** — Education, skills, and relevant coursework
+- **Projects** — Projects displayed from an array with filtering
+- **Project Details** — Individual details for each project
+- **Contact** — Email, LinkedIn, and GitHub links
+
+## React Features
+
+The website uses:
+
+- Function components
+- Reusable `Layout` and `ProjectCard` components
+- Props
+- Controlled project filter
+- Stable list keys
+- `NavLink` for navigation
+- `useParams` for project detail pages
+
+
+## Deployment
+
+The website is deployed using GitHub Pages and GitHub Actions.
+
+The deployment workflow runs the linter and creates a production build before deploying the `dist` directory.
+
+## Running Locally
+
+Install the dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
+
+```bash
+npm run dev
+```
+
+## Project Structure
+
+```text
+src/
+├── components/
+│   ├── Layout.jsx
+│   └── ProjectCard.jsx
+├── data/
+│   └── projects.js
+├── pages/
+│   ├── BasicPages.jsx
+│   ├── Projects.jsx
+│   └── ProjectDetail.jsx
+├── App.jsx
+├── index.css
+└── main.jsx
+
+.github/
+└── workflows/
+    └── deploy.yml
+```
+
+## Course
+
+CSCI 4360/5360 — Web Technologies  
+Fall 2026
