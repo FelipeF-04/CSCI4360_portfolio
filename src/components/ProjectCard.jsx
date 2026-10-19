@@ -1,9 +1,22 @@
 import { Link } from "react-router";
+
 export default function ProjectCard({ project }) {
-    return <article className="card">
-        <h2><Link to={`/projects/${project.slug}`}>
-            {project.title}</Link></h2>
-        <p>{project.summary}</p>
-        <p>{project.category} | {project.technologies.join(", ")}</p>
-    </article>;
+    return (
+        <article className="card">
+            <img
+                src={project.img}
+                alt={`${project.title} screenshot`}
+                className="project-image"
+            />
+
+            <h2>
+                <Link to={`/projects/${project.slug}`}>
+                    {project.title}
+                </Link>
+            </h2>
+
+            <p>{project.summary}</p>
+            <p>{project.category} | {project.technologies.join(", ")}</p>
+        </article>
+    );
 }

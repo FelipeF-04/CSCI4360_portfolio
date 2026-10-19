@@ -72,7 +72,7 @@ p {
 }
 
 .details {
-  text-align: justify;
+  text-align: center;
   margin-top: 0;
   margin-bottom: 1rem;
 }
@@ -217,4 +217,23 @@ img {
   max-width: 600px;
   margin: 0 auto 1.25rem;
   text-align: left;
+}
+
+.project-image {
+  display: block;
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.project-detail-image {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  max-height: 450px;
+  object-fit: contain;
+  margin: 0 auto 1.5rem;
+  border-radius: 6px;
 }
